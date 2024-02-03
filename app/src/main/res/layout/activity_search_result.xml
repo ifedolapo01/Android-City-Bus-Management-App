@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E5E5E5"
+    tools:context=".SearchResult">
+
+    <ImageView
+        android:id="@+id/busStop"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/busstoppicture" />
+
+    <TextView
+        android:id="@+id/busNumberIs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Bus Number is:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_55sdp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/busNumberOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/_29sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_125sdp"
+        android:textAlignment="center"/>
+
+    //Textview to hold the output
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_55sdp"
+        android:text="Thank you for using CBMA!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="normal" />
+
+    //Button to go back to the dashboard
+    <Button
+        android:id="@+id/searchAgain"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginLeft="@dimen/_39sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:backgroundTint="#50C2C9"
+        android:text="SEARCH AGAIN"
+        android:textSize="@dimen/_17sdp"/>
+
+</LinearLayout>

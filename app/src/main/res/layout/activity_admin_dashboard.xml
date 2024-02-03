@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E5E5E5"
+    tools:context=".AdminDashboard">
+
+    <TextView
+        android:id="@+id/admin_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADMIN DASHBOARD"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_28sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_25sdp" />
+
+    //Text Input for Location
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/admin_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:hint="Enter location">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/admin_location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nextFocusDown="@+id/goToInput"
+            android:inputType="textCapSentences|textCapWords"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Text Input for Destination
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/admin_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:hint="Enter destination">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/admin_destination_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nextFocusDown="@+id/search"
+            android:inputType="textCapSentences|textCapWords"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Text Input for bus_number
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bus_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:hint="Enter bus number">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bus_number_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nextFocusDown="@+id/search"
+            android:inputType="textCapSentences|textCapWords"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Button to insert data
+    <Button
+        android:id="@+id/insert_data"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:backgroundTint="#50C2C9"
+        android:text="Insert Data"
+        android:textSize="@dimen/_17sdp"/>
+
+    //Button to delete data
+    <Button
+        android:id="@+id/delete_data"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:backgroundTint="#50C2C9"
+        android:text="Delete Data"
+        android:textSize="@dimen/_17sdp"/>
+</LinearLayout>

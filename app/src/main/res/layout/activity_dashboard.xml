@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".Dashboard">
+
+        <ImageView
+            android:id="@+id/destination"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/destinationpicture"/>
+
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/destination"
+            android:text="Welcome!"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_21sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_27sdp"/>
+
+    <TextView
+        android:id="@+id/essay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/destination"
+        android:text="Let us help you find those bus numbers."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="normal" />
+
+
+    //Text Input for Location
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_330sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:hint="Enter your location">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nextFocusDown="@+id/goToInput"
+            android:inputType="textCapSentences|textCapWords"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Text Input for Destination
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/goToInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_410sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:hint="Enter your destination">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/goToInput_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nextFocusDown="@+id/search"
+            android:inputType="textCapSentences|textCapWords"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Button to search and retrieve bus number
+    <Button
+        android:id="@+id/search"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginLeft="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:backgroundTint="#50C2C9"
+        android:text="Search"
+        android:textSize="@dimen/_17sdp"/>
+
+</RelativeLayout>
